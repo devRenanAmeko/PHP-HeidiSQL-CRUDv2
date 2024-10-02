@@ -14,11 +14,13 @@ Executa consultas SQL que não retornam resultados (ex: INSERT, UPDATE, DELETE).
 Inicia uma transação, executa a query e comita a transação em caso de sucesso ou faz rollback em caso de erro.
 - Método privado _result:
 Formata e retorna um objeto com o status da operação (sucesso ou erro), a mensagem, o SQL executado, os resultados, o número de linhas afetadas e o último ID inserido.
+
 Arquivo index.php
 - Interface HTML:
 Formulário de registro de clientes com campos para nome e email.
 A interface usa Bootstrap para estilização e contém um botão para enviar o formulário e outro para ver os resultados.
 O formulário envia os dados para o arquivo tratar.php via método POST.
+
 Arquivo results.php
 - Apresentação dos Resultados:
 Usa a classe Database para buscar dados da tabela clientes.
@@ -26,21 +28,25 @@ Exibe os resultados em um layout Bootstrap, mostrando nome e email de cada clien
 Caso não haja clientes, uma mensagem de aviso é exibida.
 Inclui botões para remover um cliente ou editar os dados de um cliente.
 Um botão para voltar à página de registro também está disponível.
+
 Arquivo edit.php
 - Edição de Clientes:
 Carrega os dados do cliente a ser editado com base no ID fornecido.
 Apresenta um formulário pré-preenchido com os dados atuais do cliente.
 Permite a edição do nome e email, enviando os dados para o arquivo update.php via método POST.
+
 Arquivo update.php
 - Atualização de Dados:
 Recebe os dados do cliente via método POST.
 Usa a classe Database para atualizar os dados do cliente na tabela clientes.
 Após a atualização, redireciona automaticamente de volta para a página de resultados (results.php).
+
 Arquivo tratar.php
 - Tratamento do Formulário:
 Recebe os dados do formulário via método POST.
 Usa a classe Database para inserir um novo cliente na tabela clientes.
 Após a inserção, redireciona automaticamente de volta para o formulário (index.php).
+
 Arquivo os_meus_clientes.sql
 - Script de Banco de Dados:
 Cria o banco de dados os_meus_clientes e a tabela clientes com colunas id, nome, email e created_at.
