@@ -18,28 +18,28 @@ Arquivo database.php
   Formata e retorna um objeto com o status da operação (sucesso ou erro), a mensagem, o SQL executado, os resultados, o número de linhas afetadas, e o último ID inserido.
 
 Arquivo index.php
-Interface HTML:
-- Formulário de registro de clientes com campos para nome e email.
-- A interface usa Bootstrap para estilização e contém um botão para enviar o formulário e outro para ver os resultados.
-- O formulário envia os dados para o arquivo tratar.php via método POST.
+- Interface HTML:
+  Formulário de registro de clientes com campos para nome e email.
+  A interface usa Bootstrap para estilização e contém um botão para enviar o formulário e outro para ver os resultados.
+  O formulário envia os dados para o arquivo tratar.php via método POST.
 
 Arquivo results.php
-Apresentação dos Resultados: 
-- Usa a classe Database para buscar dados da tabela clientes.
-- Exibe os resultados em um layout Bootstrap, mostrando nome e email de cada cliente em cards.
-- Caso não haja clientes, uma mensagem de aviso é exibida.
-- Inclui um botão para voltar à página de registro.
+- Apresentação dos Resultados: 
+  Usa a classe Database para buscar dados da tabela clientes.
+  Exibe os resultados em um layout Bootstrap, mostrando nome e email de cada cliente em cards.
+  Caso não haja clientes, uma mensagem de aviso é exibida.
+  Inclui um botão para voltar à página de registro.
 
 Arquivo tratar.php
-Tratamento do Formulário:
-- Recebe os dados do formulário via método POST.
-- Usa a classe Database para inserir um novo cliente na tabela clientes.
-- Após a inserção, redireciona automaticamente de volta para o formulário (index.php).
+- Tratamento do Formulário:
+  Recebe os dados do formulário via método POST.
+  Usa a classe Database para inserir um novo cliente na tabela clientes.
+  Após a inserção, redireciona automaticamente de volta para o formulário (index.php).
 
 Arquivo os_meus_clientes.sql
-Script de Banco de Dados:
-- Cria o banco de dados os_meus_clientes e a tabela clientes com colunas id, nome, email e created_at.
-- Insere registros de exemplo na tabela clientes.
-- Define o charset como utf8mb4 para garantir suporte a todos os caracteres, incluindo emojis.
+- Script de Banco de Dados:
+  Cria o banco de dados os_meus_clientes e a tabela clientes com colunas id, nome, email e created_at.
+  Insere registros de exemplo na tabela clientes.
+  Define o charset como utf8mb4 para garantir suporte a todos os caracteres, incluindo emojis.
 
 
