@@ -47,6 +47,12 @@ Recebe os dados do formulário via método POST.
 Usa a classe Database para inserir um novo cliente na tabela clientes.
 Após a inserção, redireciona automaticamente de volta para o formulário (index.php).
 
+Arquivo remove.php
+- Remoção de Clientes:
+Recebe o ID do cliente a ser removido via método GET.
+Usa a classe Database para excluir o cliente da tabela clientes.
+Após a remoção, redireciona automaticamente de volta para a página de resultados (results.php), onde os dados atualizados serão exibidos.
+
 Arquivo os_meus_clientes.sql
 - Script de Banco de Dados:
 Cria o banco de dados os_meus_clientes e a tabela clientes com colunas id, nome, email e created_at.
